@@ -1,6 +1,6 @@
 {{config (schema = 'transform',materialized ='table')}}
 
-with customers as (
+with customers_orders as (
 
     select * from {{ ref('stg_customers') }}
 
