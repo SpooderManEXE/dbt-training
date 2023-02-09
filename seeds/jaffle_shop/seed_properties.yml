@@ -1,0 +1,22 @@
+version : 2
+
+seeds:
+  - name: raw_customers
+    description: "payments data for jaffle_shop"
+    docs:
+      show: true
+    config:
+      enabled: true
+      schema: seed_objects
+      tags: 'daily'
+      full_refresh: true
+      column_types:
+        id: varchar
+        
+  - name: division
+    description: "division for QWT"
+    docs:
+      show: true
+    config:
+      schema: 'STAGING'
+      database: 'QWT_ANALYTICS'
